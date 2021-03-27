@@ -29,6 +29,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      NETWORK: '',
       DAI_ADDRESS: '',
       UNISWAP_DAI_EXCHANGE_ADDRESS: '',
       ETH_AMOUNT: ''
@@ -42,12 +43,18 @@ class App extends React.Component {
     });
   }
 
+  // Select Ethereum Network (Mainnet or Ropsten)
+  selectNetwork = (e) => {
+    this.setState({
+      NETWORK: e.target.value
+    });
+  }
+
   setMinimunETH = (e) => {
     console.log(web3)
     this.setState({
       ETH_AMOUNT: e.target.value // web3.utils.toWei(e.target.value.toString(), 'Ether')
     });
-
   }
 
   render() {
