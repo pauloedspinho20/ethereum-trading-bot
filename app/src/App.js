@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './styles/App.scss';
 
 const Web3 = require('web3')
 const HDWalletProvider = require('@truffle/hdwallet-provider')
